@@ -34,7 +34,7 @@ var app = http.createServer(function (request,response) {
         var list = template.list(filelist);
       list = list+'</ul>';
         
-      var html = template.html2 (title,list,`${description}`,'<a href ="./create">create</a> <a href = " ./update?id=${title}">update</a>');
+      var html = template.html2 (title,list,`${description}`,'<a href ="./create"><img src="https://w7.pngwing.com/pngs/984/497/png-transparent-paintbrush-painting-painting-cdr-monochrome-color.png" high=100px width=100px></a> <a href = " ./update?id=${title}"><img src ="https://w7.pngwing.com/pngs/586/87/png-transparent-eraser-black-and-white-eraser-s-angle-furniture-pencil.png" high=100px width=100px></a>');
      
          response.writeHead(200);
          response.end(html);
@@ -59,8 +59,8 @@ var app = http.createServer(function (request,response) {
 
     var html = template.html (title,list,
       `${description}`,
-      `<a href ="./create">create</a>
-        <a href = " ./update?id=${title}">update</a>
+      `<a href ="./create"><img src ="https://w7.pngwing.com/pngs/984/497/png-transparent-paintbrush-painting-painting-cdr-monochrome-color.png" high=100px width=100px></a>
+        <a href = " ./update?id=${title}"><img src ="https://w7.pngwing.com/pngs/586/87/png-transparent-eraser-black-and-white-eraser-s-angle-furniture-pencil.png"high=100px width=100px></a>
         <form action="/delete_process" method="post" >
         <input type="hidden" name="id" value="${title}">
         <input type="submit" value="delete">
@@ -157,7 +157,7 @@ var app = http.createServer(function (request,response) {
       </p>
       </form>
       `,
-      `<a href ="./create">create</a>
+      `<a href ="./create"><</a>
     <a href = " ./update?id=${title}">update</a>`);
     response.end(html); 
     response.writeHead(200);
